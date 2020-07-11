@@ -201,33 +201,33 @@ namespace calisma05_namespaces
             else
             { Console.WriteLine("sayılar eşit değil ve k ile m nin toplamı :" + (k + m)); }
 
-            char ch = 'a';
-            Console.WriteLine("Bir karakter giriniz : ");
-            ch = Convert.ToChar(Console.ReadLine());
+            // char ch = 'a';
+            // Console.WriteLine("Bir karakter giriniz : ");
+            // ch = Convert.ToChar(Console.ReadLine());
 
 
 
-            if (Char.IsUpper(ch))
-            {
-                Console.WriteLine("Doğru " + ch);
-            }
-            else
-            {
-                Console.WriteLine("Yanlış " + ch);
+            // if (Char.IsUpper(ch))
+            // {
+            //     Console.WriteLine("Doğru " + ch);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Yanlış " + ch);
 
-            }
+            // }
 
-            Console.WriteLine("char ch karakter numerik mi :" + Char.GetNumericValue(ch));
-            if (Char.GetNumericValue(ch) == -1)
-            {
-                Console.WriteLine("ch numerik bir karakter değilidr : " + Char.GetNumericValue(ch));
+            // Console.WriteLine("char ch karakter numerik mi :" + Char.GetNumericValue(ch));
+            // if (Char.GetNumericValue(ch) == -1)
+            // {
+            //     Console.WriteLine("ch numerik bir karakter değilidr : " + Char.GetNumericValue(ch));
 
-            }
-            else
-            {
-                Console.WriteLine(Char.GetNumericValue(ch));
+            // }
+            // else
+            // {
+            //     Console.WriteLine(Char.GetNumericValue(ch));
 
-            }
+            // }
             string z = "000";
             Console.WriteLine(String.Concat(s, z));
 
@@ -254,87 +254,217 @@ namespace calisma05_namespaces
                 }
             }
             Console.WriteLine();
+            
+                        if (Char.IsUpper(str, 2)) // bool char.IsUpper(string s, int index)
+                                                  // Indicates whether the character at the specified position in a specified string is categorized as an uppercase letter.
+                        {
+                            Console.WriteLine("'str' cümlesinin 3.karakteri büyük harftir.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("'str' cümlesinin 3.karakteri büyük harf değildir.");
 
-            if (Char.IsUpper(str, 2)) // bool char.IsUpper(string s, int index)
-                                      // Indicates whether the character at the specified position in a specified string is categorized as an uppercase letter.
+                        }
+                        string BuyukYazi = "";
+                        //Console.WriteLine(BuyukYazi=str.ToUpper());
+                        for (int i = 0; i < str.Length; ++i)
+                            BuyukYazi += Char.ToUpper(str[i]);
+
+                        Console.WriteLine("Büyük Yazı : " + BuyukYazi);
+
+                        string KucukYazi = "";
+                        for (int i = 0; i < BuyukYazi.Length; ++i)
+                            KucukYazi += Char.ToLower(BuyukYazi[i]);
+
+                        Console.WriteLine("Küçük Yazı : " + KucukYazi);
+
+                        Decimal dec = new decimal(986576, 0, 0, false, 3);
+                        Console.WriteLine(decimal.Round(dec, 2));
+
+                        Console.WriteLine("En küçük :" + DateTime.MinValue);
+                        Console.WriteLine("En küçük :" + DateTime.MinValue);
+                        Console.WriteLine(DateTime.Now);
+                        Console.WriteLine(DateTime.Today);
+
+                        DateTime Tarih = new DateTime(2020, 07, 10, 23, 12, 59);
+                        Console.WriteLine("*---" + Tarih.DayOfWeek);
+                        Console.WriteLine(Tarih.DayOfYear);
+                        Console.WriteLine(Tarih.Date);
+                        Console.WriteLine(Tarih.Month);
+                        Console.WriteLine(Tarih.Day);
+                        Console.WriteLine(Tarih.TimeOfDay + "-----*");
+                        int we = Convert.ToInt32(Tarih.DayOfWeek);
+                        int week = Convert.ToInt32(DayOfWeek.Friday);
+
+                        int trh = DateTime.DaysInMonth(2020, 2);
+                        Console.WriteLine(trh);
+                        Console.WriteLine(we);
+                        Console.WriteLine(Tarih);
+
+                        int yil, ay, gun;
+                        Console.Write("Doğum yılı : ");
+                        yil = Convert.ToInt32(Console.ReadLine());
+
+                        Console.Write("Doğum ayı : ");
+                        ay = Convert.ToInt32(Console.ReadLine());
+
+                        Console.Write("Doğum günü : ");
+                        gun = Convert.ToInt32(Console.ReadLine());
+
+                        DateTime Bugun = DateTime.Today;
+                        DateTime DogumTarihi = new DateTime(yil, ay, gun);
+
+                        TimeSpan fark = Bugun - DogumTarihi;
+                        //Console.WriteLine("*"+fark);
+
+                        Console.WriteLine("Doğduğun gün :" + DogumTarihi.DayOfWeek);
+                        Console.WriteLine("Geçen gün sayısı :" + fark.Days);
+
+                        int GunSayisi;
+                        Console.Write("Gün sayısını giriniz :");
+                        GunSayisi = Convert.ToInt32(Console.ReadLine());
+
+                        TimeSpan GunSonra = new TimeSpan(GunSayisi, 0, 0, 0);
+                        DateTime dt = DateTime.Today+GunSonra;
+
+                        Console.WriteLine($" Bugünden {GunSayisi} gun sonra ki gün {dt.DayOfWeek} 'dir");
+
+                        // verilen iki tarih arasında geçen haftasonu günlerini bulma 
+
+                        int yil1,ay1,gun1;
+                        Console.Write("İlk tarihin yılını giriniz :");
+                        yil1 = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("İlk tarihin ayını giriniz :");
+                        ay1 = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("İlk tarihin gününü giriniz :");
+                        gun1 = Convert.ToInt32(Console.ReadLine());
+
+                        int yil2,ay2,gun2;
+                        Console.Write("Sonraki tarihin yılını giriniz :");
+                        yil2 = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Sonraki tarihin ayını giriniz :");
+                        ay2 = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Sonraki tarihin gününü giriniz :");
+                        gun2 = Convert.ToInt32(Console.ReadLine());
+
+                        DateTime Tarih1 = new DateTime(yil1,ay1,gun1);
+                        DateTime Tarih2 = new DateTime(yil2,ay2,gun2);
+
+                        long HaftaSonuGunu = 0;
+                        DateTime gecici;
+
+                        if (yil2>yil1||ay2>ay1)
+                        {
+                            TimeSpan ikiTarihFarki = Tarih2-Tarih1;
+
+                            for (int i = 0; i<=ikiTarihFarki.Days;++i)
+                            {
+                                gecici=Tarih1.AddDays(i);
+                                if (gecici.DayOfWeek==DayOfWeek.Saturday||gecici.DayOfWeek==DayOfWeek.Sunday)
+                                HaftaSonuGunu++;
+                            }
+                        }
+                        else
+                        {
+                            TimeSpan ikiTarihFarki = Tarih1-Tarih2;
+                            for (int i = 0; i<=ikiTarihFarki.Days;++i)
+                            {
+                                gecici=Tarih1.AddDays(i); // Tarihi "i" gün kadar artırıyor.
+                                if (gecici.DayOfWeek==DayOfWeek.Saturday||gecici.DayOfWeek==DayOfWeek.Sunday)
+                                HaftaSonuGunu++;
+                            }
+                        } 
+                        Console.WriteLine("İki tarih arasında geçen haftasonu gün sayısı :"+HaftaSonuGunu);  
+
+                        DateTime tarih11,tarih12;
+                        Console.Write("Tarihi Yıl.Ay.Gün olarak giriniz (Exp :2020.12.24) gibi :");
+                        tarih11 = Convert.ToDateTime(Console.ReadLine());
+                        Console.WriteLine("Girdiğiniz tarih :"+tarih11);
+                        Console.Write("İkinci tarihi giriniz : ");
+                        tarih12 = Convert.ToDateTime(Console.ReadLine());
+                        Console.WriteLine("Girdiğiniz tarih :"+tarih12);
+
+                        long haftasonuGunu = 0;
+                        DateTime Gecici;
+
+                        if (tarih11<tarih12)
+                        {
+                            TimeSpan yillarArasiFark = tarih12-tarih11;
+                            for ( int i =0; i<=yillarArasiFark.Days; ++i)
+                            {
+                                Gecici=tarih11.AddDays(i);
+                                if (Gecici.DayOfWeek==DayOfWeek.Saturday||Gecici.DayOfWeek==DayOfWeek.Sunday)
+                                {
+                                    haftasonuGunu++;
+                                }
+
+                            }
+                            //Console.WriteLine(true);
+                        }
+                        else
+                        {
+                            TimeSpan yillarArasiFark = tarih11-tarih12;
+                            for ( int i =0; i<=yillarArasiFark.Days; ++i)
+                            {
+                                Gecici=tarih11.AddDays(i);
+                                if (Gecici.DayOfWeek==DayOfWeek.Saturday||Gecici.DayOfWeek==DayOfWeek.Sunday)
+                                {
+                                    haftasonuGunu++;
+                                }
+
+                            }
+                            //Console.WriteLine(false);
+                        }
+                        Console.WriteLine("İki tarih arasındaki toplam haftsonu gün sayısı :"+haftasonuGunu); 
+            
+            if (BitConverter.IsLittleEndian)
             {
-                Console.WriteLine("'str' cümlesinin 3.karakteri büyük harftir.");
+                Console.WriteLine("Little Endian");
             }
             else
             {
-                Console.WriteLine("'str' cümlesinin 3.karakteri büyük harf değildir.");
-
+                Console.WriteLine("Big Endian");
             }
-            string BuyukYazi = "";
-            //Console.WriteLine(BuyukYazi=str.ToUpper());
-            for (int i = 0; i < str.Length; ++i)
-                BuyukYazi += Char.ToUpper(str[i]);
 
-            Console.WriteLine("Büyük Yazı : " + BuyukYazi);
+            uint bitDon = 65536 * 256 + 255;
 
-            string KucukYazi = "";
-            for (int i = 0; i < BuyukYazi.Length; ++i)
-                KucukYazi += Char.ToLower(BuyukYazi[i]);
+            byte[] aByte = BitConverter.GetBytes(bitDon);
+            foreach (byte i in aByte)
+                Console.Write(i + " ");
 
-            Console.WriteLine("Küçük Yazı : " + KucukYazi);
+            Console.WriteLine(int.MaxValue);
+            Console.WriteLine(int.MinValue);
 
-            Decimal dec = new decimal(986576, 0, 0, false, 3);
-            Console.WriteLine(decimal.Round(dec, 2));
+            // Console.Write("Bir sayı giriniz :");
+            //  string st = Console.ReadLine();
+            // int iSt = Convert.ToInt32(st);
+            // Console.WriteLine(iSt);
 
-            Console.WriteLine("En küçük :" + DateTime.MinValue);
-            Console.WriteLine("En küçük :" + DateTime.MinValue);
-            Console.WriteLine(DateTime.Now);
-            Console.WriteLine(DateTime.Today);
+            byte[] kaynak = { 1, 2, 3, 1, 2 };
+            short[] hedef = new short[10];
 
-            DateTime Tarih = new DateTime(2020, 07, 10, 23, 12, 59);
-            Console.WriteLine("*---" + Tarih.DayOfWeek);
-            Console.WriteLine(Tarih.DayOfYear);
-            Console.WriteLine(Tarih.Date);
-            Console.WriteLine(Tarih.Month);
-            Console.WriteLine(Tarih.Day);
-            Console.WriteLine(Tarih.TimeOfDay + "-----*");
-            int we = Convert.ToInt32(Tarih.DayOfWeek);
-            int week = Convert.ToInt32(DayOfWeek.Friday);
+            Buffer.BlockCopy(kaynak, 0, hedef, 0, 5);  //void Buffer.BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count)
 
-            int trh = DateTime.DaysInMonth(2020, 2);
-            Console.WriteLine(trh);
-            Console.WriteLine(we);
-            Console.WriteLine(Tarih);
+            foreach (short i in hedef)
+                Console.Write(i + " ");
+            Console.WriteLine();
+            char[] chr = new char[5];
+            str.CopyTo(0, chr, 0, 3);
+            foreach (char i in chr)
+                Console.Write(i);
+            Console.WriteLine(chr);
 
-            int yil, ay, gun;
-            Console.Write("Doğum yılı : ");
-            yil = Convert.ToInt32(Console.ReadLine());
+            byte[] diziB = { 1, 2, 3, 4, 5, 6 };
+            byte[] diziX = new byte[5];
+            byte xx = 5;
+            Console.WriteLine(Buffer.GetByte(diziB, 0));
+         
+            Buffer.SetByte(diziX, 1, xx);
+            Console.WriteLine(diziX[1]);
 
-            Console.Write("Doğum ayı : ");
-            ay = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Doğum günü : ");
-            gun = Convert.ToInt32(Console.ReadLine());
-
-            DateTime Bugun = DateTime.Today;
-            DateTime DogumTarihi = new DateTime(yil, ay, gun);
-
-            TimeSpan fark = Bugun - DogumTarihi;
-            //Console.WriteLine("*"+fark);
-
-            Console.WriteLine("Doğduğun gün :" + DogumTarihi.DayOfWeek);
-            Console.WriteLine("Geçen gün sayısı :" + fark.Days);
-
-            int GunSayisi;
-            Console.Write("Gün sayısını giriniz :");
-            GunSayisi = Convert.ToInt32(Console.ReadLine());
-
-            TimeSpan GunSonra = new TimeSpan(GunSayisi, 0, 0, 0);
-            DateTime dt = DateTime.Today+GunSonra;
-
-            Console.WriteLine($" Bugünden {GunSayisi} gun sonra ki gün {dt.DayOfWeek} 'dir");
-
-
-
-
-
-
-
+           Console.WriteLine(Convert.ToInt32(GC.GetTotalMemory(true)));
+           GC.Collect();
+            
 
 
 
