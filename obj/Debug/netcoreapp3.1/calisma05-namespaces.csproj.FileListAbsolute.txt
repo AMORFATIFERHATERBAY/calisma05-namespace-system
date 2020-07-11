@@ -1,0 +1,12 @@
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/bin/Debug/netcoreapp3.1/calisma05-namespaces.deps.json
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/bin/Debug/netcoreapp3.1/calisma05-namespaces.runtimeconfig.json
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/bin/Debug/netcoreapp3.1/calisma05-namespaces.runtimeconfig.dev.json
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/bin/Debug/netcoreapp3.1/calisma05-namespaces.dll
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/bin/Debug/netcoreapp3.1/calisma05-namespaces.pdb
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.csprojAssemblyReference.cache
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.AssemblyInfoInputs.cache
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.AssemblyInfo.cs
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.csproj.CoreCompileInputs.cache
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.dll
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.pdb
+/Users/amorfati/Desktop/dotnet-deneme/calisma05-namespaces/obj/Debug/netcoreapp3.1/calisma05-namespaces.genruntimeconfig.cache
